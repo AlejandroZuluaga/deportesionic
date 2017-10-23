@@ -13,8 +13,9 @@ export class LoginServicesProvider {
 
   }
   public login(postParams) {
-    let body = 'email=' + postParams.nombreUsuario;
+    let body = 'email=' + postParams.email;
     this.headerPost = new Headers({
+      'Content-Type':'application/json',
       'auth': 'alejo',
       'passwd': 'admin'
     })

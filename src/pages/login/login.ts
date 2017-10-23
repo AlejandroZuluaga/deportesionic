@@ -10,7 +10,7 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  public nombreUsuario: String;
+  public email: String;
   rootPage: any;
 
   constructor(public navCtrl: NavController,
@@ -20,7 +20,7 @@ export class LoginPage {
   }
   login() {
     let postParams = {
-      nombreUsuario: this.nombreUsuario
+      email: this.email
     }
 
     this.loginService.login(postParams)
